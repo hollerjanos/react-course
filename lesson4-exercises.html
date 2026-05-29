@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+    <style>
+      /* 4a */
+      /* .button {
+        background-color: rgb(25, 135, 84);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      } */
+
+      /* 4c */
+      /* .button-on {
+        background-color: rgb(25, 135, 84);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button-off {
+        background-color: rgb(220, 53, 60);
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      } */
+
+      /* 4d */
+      /* body {
+        font-family: Arial;
+      }
+
+      title {
+        font-size: 25px;
+      }
+
+      .input {
+        padding: 5px 10px;
+        border-width: 1px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        width: 200px;
+      }
+
+      .button {
+        padding: 10px 15px;
+        background-color: rgb(0, 123, 255);
+        color: white;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+      } */
+
+      /* 4e */
+      /* body {
+        font-family: Arial;
+      }
+
+      title {
+        font-size: 25px;
+      }
+
+      .input {
+        padding: 5px 10px;
+        border-width: 1px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        width: 200px;
+      }
+
+      .button {
+        padding: 10px 15px;
+        background-color: rgb(0, 123, 255);
+        color: white;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+
+      .toggle-password-button {
+        margin-left: 10px;
+      } */
+
+      /* 4i */
+      /* body {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .button {
+        background-color: rgb(25, 135, 84);
+        border: none;
+        margin-right: 10px;
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px;
+      }
+
+      .app-container {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(222, 222, 222);
+        height: 100vh;
+        align-items: center;
+      } */
+    </style>
+
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <!-- 4f -->
+    <!-- <script src="https://unpkg.com/supersimpledev/dayjs.js"></script> -->
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      // // 4a
+      // function App() {
+      //   return (
+      //     <button className="button">ON</button>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 4b
+      // function App() {
+      //   function click() {
+      //     setIsButtonOn(!isButtonOn);
+      //   }
+      //   const [isButtonOn, setIsButtonOn] = React.useState(true);
+      //   return (
+      //     <button
+      //       className="button"
+      //       onClick={click}
+      //     >{isButtonOn ? "ON" : "OFF"}</button>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 4c
+      // function App() {
+      //   function click() {
+      //     setIsButtonOn(!isButtonOn);
+      //   }
+      //   const [isButtonOn, setIsButtonOn] = React.useState(true);
+      //   return (
+      //     <button
+      //       className={isButtonOn ? "button-on" : "button-off"}
+      //       onClick={click}
+      //     >{isButtonOn ? "ON" : "OFF"}</button>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 4d
+      // function App() {
+      //   return (
+      //     <>
+      //       <p className="title">Hello, welcome to my website</p>
+      //       <div>
+      //         <input
+      //           className="input"
+      //           placeholder="Email"
+      //         />
+      //       </div>
+      //       <div>
+      //         <input
+      //           className="input"
+      //           type="password"
+      //           placeholder="Password"
+      //         />
+      //       </div>
+      //       <div>
+      //         <button
+      //           className="button"
+      //         >
+      //           Login
+      //         </button>
+      //         <button
+      //           className="button"
+      //         >
+      //           Sign up
+      //         </button>
+      //       </div>
+      //     </>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // 4e
+      // function App() {
+      //   const [showPassword, setShowPassword] = React.useState(false);
+      //
+      //   function togglePassword() {
+      //     setShowPassword(!showPassword);
+      //   }
+      //
+      //   return (
+      //     <>
+      //       <p className="title">Hello, welcome to my website</p>
+      //       <div>
+      //         <input
+      //           className="input"
+      //           placeholder="Email"
+      //         />
+      //       </div>
+      //       <div>
+      //         <input
+      //           className="input"
+      //           type={!showPassword ? "password" : "text"}
+      //           placeholder="Password"
+      //         />
+      //         <button
+      //           className="toggle-password-button"
+      //           onClick={togglePassword}
+      //         >
+      //           {showPassword ? "Hide" : "Show"}
+      //         </button>
+      //       </div>
+      //       <div>
+      //         <button
+      //           className="button"
+      //         >
+      //           Login
+      //         </button>
+      //         <button
+      //           className="button"
+      //         >
+      //           Sign up
+      //         </button>
+      //       </div>
+      //     </>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 4f
+      // function App() {
+      //   const [time, setTime] = React.useState(dayjs().format("HH:mm:ss"));
+      //
+      //   React.useEffect(() => {
+      //     setInterval(() => {
+      //       setTime(dayjs().format("HH:mm:ss"));
+      //     }, 1000);
+      //   }, []);
+      //
+      //   return (
+      //     <p>Current time: {time}</p>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 4g
+      // function App() {
+      //   const [time, setTime] = React.useState(dayjs().format("HH:mm:ss"));
+      //
+      //   React.useEffect(() => {
+      //     setInterval(() => {
+      //       setTime(dayjs().format("HH:mm:ss"));
+      //       console.log("run code");
+      //     }, 1000);
+      //   }, []);
+      //
+      //   return (
+      //     <p>Current time: {time}</p>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 4h
+      // function App() {
+      //   const [count, setCount] = React.useState(0);
+      //   const buttonRef = React.useRef(null);
+      //   function increaseCounter() {
+      //     setCount(count + 1);
+      //   }
+      //
+      //   function resetCounter() {
+      //     setCount(0);
+      //   }
+      //
+      //   function autoClick() {
+      //     setInterval(() => {
+      //       const buttonElem = buttonRef.current;
+      //       if (buttonElem) {
+      //         buttonElem.click();
+      //       }
+      //     }, 1000);
+      //   }
+      //
+      //   return (
+      //     <>
+      //       <button
+      //         ref={buttonRef}
+      //         onClick={increaseCounter}
+      //       >Clicked {count} {count === 1 ? 'time' : 'times'}</button>
+      //       <button
+      //         onClick={resetCounter}
+      //       >Reset</button>
+      //       <button
+      //         onClick={autoClick}
+      //       >Auto Click</button>
+      //     </>
+      //   );
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+    //   // 4i
+    //   function App() {
+    //     const [count, setCount] = React.useState(0);
+    //     const buttonRef = React.useRef(null);
+    //     function increaseCounter() {
+    //       setCount(count + 1);
+    //     }
+    //
+    //     function resetCounter() {
+    //       setCount(0);
+    //     }
+    //
+    //     function autoClick() {
+    //       setInterval(() => {
+    //         const buttonElem = buttonRef.current;
+    //         if (buttonElem) {
+    //           buttonElem.click();
+    //         }
+    //       }, 1000);
+    //     }
+    //
+    //     return (
+    //       <div className="app-container">
+    //         <button
+    //           className="button"
+    //           ref={buttonRef}
+    //           onClick={increaseCounter}
+    //         >Clicked {count} {count === 1 ? 'time' : 'times'}</button>
+    //         <button
+    //           className="button"
+    //           onClick={resetCounter}
+    //         >Reset</button>
+    //         <button
+    //           className="button"
+    //           onClick={autoClick}
+    //         >Auto Click</button>
+    //       </div>
+    //     );
+    //   }
+    //
+    //   const container = document.querySelector('.js-container');
+    //   ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
