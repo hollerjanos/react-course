@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      // // 3a
+      // function App() {
+      //   function click() {
+      //     console.log("Clicked")
+      //   }
+      //
+      //   return (
+      //     <button onClick={click}>
+      //       Clicked 0 times
+      //     </button>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 3b
+      // function App() {
+      //   const [count, setCount] = React.useState(0);
+      //
+      //   function click() {
+      //     setCount(count + 1);
+      //   }
+      //
+      //   return (
+      //     <button onClick={click}>
+      //       Clicked {count} times
+      //     </button>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // 3c
+      // function App() {
+      //   const [count, setCount] = React.useState(0);
+      //
+      //   function click() {
+      //     setCount(count + 1);
+      //   }
+      //
+      //   return (
+      //     <button onClick={click}>
+      //       Clicked {count} {count == 1 ? "time" : "times"}
+      //     </button>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 3d
+      // function Counter() {
+      //   const [count, setCount] = React.useState(0);
+      //
+      //   function click() {
+      //     setCount(count + 1);
+      //   }
+      //
+      //   return (
+      //     <button onClick={click}>
+      //       Clicked {count} {count == 1 ? "time" : "times"}
+      //     </button>
+      //   );
+      // }
+      //
+      // function App() {
+      //   return (
+      //     <>
+      //       <Counter />
+      //       <Counter />
+      //     </>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 3e
+      // function Counter({count, setCount}) {
+      //
+      //   function click() {
+      //     setCount(count + 1);
+      //   }
+      //
+      //   return (
+      //     <button onClick={click}>
+      //       Clicked {count} {count == 1 ? "time" : "times"}
+      //     </button>
+      //   );
+      // }
+      //
+      // function App() {
+      //   const [count, setCount] = React.useState(0);
+      //
+      //   return (
+      //     <>
+      //       <Counter
+      //         count={count}
+      //         setCount={setCount}
+      //       />
+      //       <Counter
+      //         count={count}
+      //         setCount={setCount}
+      //       />
+      //     </>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 3f
+      // function Counter({count, setCount}) {
+      //
+      //   function click() {
+      //     setCount(count + 1);
+      //   }
+      //
+      //   return (
+      //     <button onClick={click}>
+      //       Clicked {count} {count == 1 ? "time" : "times"}
+      //     </button>
+      //   );
+      // }
+      //
+      // function App() {
+      //   const [count, setCount] = React.useState(0);
+      //
+      //   function reset() {
+      //     setCount(0);
+      //   }
+      //
+      //   return (
+      //     <>
+      //       <Counter
+      //         count={count}
+      //         setCount={setCount}
+      //       />
+      //       <Counter
+      //         count={count}
+      //         setCount={setCount}
+      //       />
+      //       <button onClick={reset}>Reset</button>
+      //     </>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 3g
+      // function App() {
+      //   const [text, setText] = React.useState("");
+      //
+      //   function textInput(event) {
+      //     setText(event.target.value);
+      //   }
+      //
+      //   return (
+      //     <>
+      //       <input
+      //         placeholder="Type a name here"
+      //         onChange={textInput}
+      //       />
+      //       <p>Hello {text}</p>
+      //     </>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+
+      // // 3h
+      // function App() {
+      //   const [text, setText] = React.useState("");
+      //
+      //   function textInput(event) {
+      //     setText(event.target.value);
+      //   }
+      //
+      //   function reset() {
+      //     setText("");
+      //   }
+      //
+      //   function example() {
+      //     setText("Alice");
+      //   }
+      //
+      //   return (
+      //     <>
+      //       <input
+      //         placeholder="Type a name here"
+      //         onChange={textInput}
+      //         value={text}
+      //       />
+      //       <button onClick={reset}>Reset</button>
+      //       <button onClick={example}>Example</button>
+      //       <p>Hello {text}</p>
+      //     </>
+      //   )
+      // }
+      //
+      // const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
