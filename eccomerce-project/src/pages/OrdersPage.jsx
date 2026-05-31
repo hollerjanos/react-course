@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
-import { Header } from '../components/Header'
+import { Header } from '../components/Header';
+import BuyAgain from '../assets/images/icons/buy-again.png';
 import './OrdersPage.css';
 
 export function OrdersPage() {
@@ -9,38 +10,6 @@ export function OrdersPage() {
       <link rel="icon" type="image/svg+xml" href="orders-favicon.png" />
 
       <Header />
-
-      <div className="header">
-        <div className="left-section">
-          <Link to="/" className="header-link">
-            <img className="logo"
-              src="images/logo-white.png" />
-            <img className="mobile-logo"
-              src="images/mobile-logo-white.png" />
-          </Link>
-        </div>
-
-        <div className="middle-section">
-          <input className="search-bar" type="text" placeholder="Search" />
-
-          <button className="search-button">
-            <img className="search-icon" src="images/icons/search-icon.png" />
-          </button>
-        </div>
-
-        <div className="right-section">
-          <Link className="orders-link header-link" to="/orders">
-
-            <span className="orders-text">Orders</span>
-          </Link>
-
-          <Link className="cart-link header-link" to="/checkout">
-            <img className="cart-icon" src="images/icons/cart-icon.png" />
-            <div className="cart-quantity">3</div>
-            <div className="cart-text">Cart</div>
-          </Link>
-        </div>
-      </div>
 
       <div className="orders-page">
         <div className="page-title">Your Orders</div>
@@ -82,7 +51,7 @@ export function OrdersPage() {
                   Quantity: 1
                 </div>
                 <button className="buy-again-button button-primary">
-                  <img className="buy-again-icon" src="images/icons/buy-again.png" />
+                  <img className="buy-again-icon" src={BuyAgain}/>
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>
@@ -110,7 +79,7 @@ export function OrdersPage() {
                   Quantity: 2
                 </div>
                 <button className="buy-again-button button-primary">
-                  <img className="buy-again-icon" src="images/icons/buy-again.png" />
+                  <img className="buy-again-icon" src={BuyAgain}/>
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>
@@ -161,7 +130,7 @@ export function OrdersPage() {
                   Quantity: 2
                 </div>
                 <button className="buy-again-button button-primary">
-                  <img className="buy-again-icon" src="images/icons/buy-again.png" />
+                  <img className="buy-again-icon" src={BuyAgain}/>
                   <span className="buy-again-message">Add to Cart</span>
                 </button>
               </div>
