@@ -4,7 +4,6 @@ import dayjs from 'dayjs';
 import BuyAgain from '../../assets/images/icons/buy-again.png';
 
 export function OrderDetailsGrid({ order }) {
-  console.log("order", order);
   return (
     <div className="order-details-grid">
       {order.products.map((orderProduct) => {
