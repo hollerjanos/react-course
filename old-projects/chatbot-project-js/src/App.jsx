@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Chatbot } from 'supersimpledev';
 import { ChatInput } from './components/ChatInput';
 import ChatMessages from './components/ChatMessages';
+import RobotProfileImage from './assets/robot.png';
 import './App.css'
 
 function App() {
@@ -22,7 +23,13 @@ function App() {
     localStorage.setItem('messages', JSON.stringify(chatMessages));
   }, [chatMessages]);
 
+  const title = `${chatMessages.length} Messages`;
+
   return (
+    <>
+      <title>{title}</title>
+      <link rel="icon" type="image/svg+xml" href={RobotProfileImage} />
+
       <div className="app-container">
       {chatMessages.length === 0 && (
         <p className="welcome-message">
@@ -37,6 +44,7 @@ function App() {
         setChatMessages={setChatMessages}
       />
       </div>
+    </>
   );
 }
 
